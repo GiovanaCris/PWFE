@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11</title>
+</head>
+<body>
+    <script>
+        let jogadas_possiveis =  ["tesoura", "papel", "pedra"];
+        let jogadapc = jogadas_possiveis[Math.floor(Math.random() * jogadas_possiveis.length)]; //Sortear e escolher uma das palavras da lista jogadas_possiveis
+
+        let jogada = prompt("Digite sua jogada: pedra - papel - tesoura").toLocaleLowerCase();
+
+        if (jogadapc === jogada){
+            document.write(`empate ambos escolheram ${jogada}`)
+        }
+
+        else if (
+        (jogada === "tesoura" && jogadapc === "papel") ||
+        (jogada === "papel" && jogadapc === "pedra") ||
+        (jogada === "pedra" && jogadapc === "tesoura")
+        ) {
+            document.write(`Aff, você ganhou! Eu escolhi ${jogadapc} e você escolheu ${jogada}`);
+        }
+        else if (
+        (jogadapc === "tesoura" && jogada === "papel") ||
+        (jogadapc === "papel" && jogada === "pedra") ||
+        (jogadapc === "pedra" && jogada === "tesoura")
+        ) {
+            document.write(`Hahaha, eu ganhei! Você escolheu ${jogada} e eu escolhi ${jogadapc}`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+</head>
+<body>
+    <script>
+        let nome = String(prompt("Digite o nome do aluno"));
+        let nota1 = Number(prompt("Digite a primeira nota: "));
+        let nota2 = Number(prompt("Digite a segunda nota: "));
+        media = (nota1 + nota2) / 2
+
+        if (media >= 7 ){
+            document.write(`O aluno ${nome} tem a média ${media} e está acima da média! `)
+            if (media % 2 == 0){
+                document.write(`Média par`)
+            }
+        } 
+        else if (media < 7){
+            document.write(`O aluno está abaixo da média!`)
+        }
+    </script>
+</body>
+</html>
