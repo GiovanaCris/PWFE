@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 07</title>
+</head>
+<body>
+    <script>
+        let nomes = ["Ana", "Nicolas", "Giovana", "Luana", "Fran", "Adrian", "Raphaela", "Letícia", "Gabi", "Israel"];
+        let tentativas = 0;
+
+        while (tentativas > 5){
+            let nome_buscar = prompt("Digite um nome: ");
+
+            if (nomes.includes(nome_buscar)) {
+                for (let i = 0; i < nomes.length; i++) {
+                    if (nomes[i] === nome_buscar) {
+                        tentativas++;
+                        alert("Posição: " + i);
+                        break;
+                    }
+                }
+
+            } else {
+                alert("Nome não encontrado");
+            }
+        }
+        alert("Suas tentativas acabaram!");
+        
+    </script>
+</body>
+</html>
