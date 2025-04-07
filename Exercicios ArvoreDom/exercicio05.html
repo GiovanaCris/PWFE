@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+</head>
+<body>
+   <h2>Números em Ordem Crescente</h2>
+   <input type="text" id="numeros" maxlength="3" inputmode="numeric" placeholder="Digite 3 números:">
+   <button onclick="pegarnum()">Usar números</button>
+
+   <div id="resultado"></div>
+
+   <script>
+    const pegarnum =() => {
+        const valor = document.getElementById('numeros').value;
+
+        if (valor.length != 3 || isNaN(valor)) {
+            alert('Digite 3 números!');
+            return;
+        }
+
+        const num1 = parseInt(valor[0]);
+        const num2 = parseInt(valor[1]);
+        const num3 = parseInt(valor[2]);
+
+        const numeros = [num1, num2, num3];
+        const ordenados = numeros.sort((a,b) => a - b);
+
+        document.getElementById('resultado').innerHTML = `Os números digitados em ordem crescente é ${ordenados.join(', ')}`
+    }
+
+   </script>
+</body>
+</html>
