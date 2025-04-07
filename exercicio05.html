@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+</head>
+<body>
+   <h2>Números em Ordem Crescente</h2>
+   <input type="number" id="numero" inputmode="numeric" maxlength="1" placeholder="Digite 3 números:">
+
+   <button onclick="pegarnum()">Usar números</button>
+
+   <div id="resultado"></div>
+
+    <style>
+        html {
+            display: flex;
+            justify-content: center;
+        }
+
+        body {
+            max-width: 400px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: 1px solid #ccc;
+            padding: 20px 40px 20px;
+            margin: 20px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 20px;
+            gap: 20px;
+        }
+
+        input {
+            padding: 8px 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: rgb(211, 178, 255);
+            cursor: pointer;
+        }
+    </style>
+
+   <script>
+       const numero = []
+       const pegarnum = () => { 
+
+            const valor = document.getElementById('numero').value;
+
+            if (valor.length === '' || valor.length != 1) {
+                alert('Digite um número válido');
+                return;
+            }
+            numero.push(parseInt(valor))
+
+            const b = document.getElementById('numero').value = " ";
+
+            if (numero.length === 3){
+                const ordenados = numero.sort((a, b) => a - b);
+                document.getElementById('resultado').innerHTML = `Os números digitados em ordem crescente é: ${ordenados.join(', ')}`
+            }
+    }
+   </script>
+</body>
+</html>

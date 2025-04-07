@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+</head>
+<body>
+    <h2>Inversor de Strings</h2>
+    <input type="text" id="palavra" placeholder="Digite uma palavra:">
+
+    <button onclick="inverter()">Clique aqui</button>
+    <div id="resultado"></div>
+
+    <style>
+        html {
+            display: flex;
+            justify-content: center;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            border: 1px solid #ccc;
+            padding: 20px 10px 40px;
+            max-width: 400px;
+            display: flex;
+            margin: 20px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 8px;
+        }
+
+        button {
+            background-color: rgb(116, 116, 230);
+            padding: 8px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            border: 1px solid #ccc;
+        }
+
+        
+    </style>
+
+    <script>
+        const inverter = () => {
+            const palavra = document.getElementById('palavra').value;
+            const invertido = palavra.split('').reverse().join('');
+            window.document.getElementById('resultado').textContent = `Invertido: ${invertido}`;
+        };
+    </script>
+</body>
+</html>

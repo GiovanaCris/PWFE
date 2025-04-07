@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+</head>
+<body>
+    <h2>Separador de Strings</h2>
+    <input type="text" id="nome" placeholder="Digite um nome:">
+
+    <button onclick="separar()">Separar String</button>
+    <div id="resultado"></div>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+        html {
+            display: flex;
+            justify-content: center;
+        }
+
+        body {
+            font-family: "Inria Sans", sans-serif;
+            border: 1px solid #ccc;
+            max-width: 300px;
+            border-radius: 10px;
+            padding: 10px 20px 30px;
+            display: flex;
+            gap: 20px;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        input {
+            padding: 8px 10px;
+            font-size: 15px;
+            border-radius: 10px;
+            border: none;
+            border: 1px solid #ccc;
+        }
+
+        input:focus{
+            background-color: rgb(236, 225, 246);
+            transition: 0.8s ease;
+            border: none;
+        }
+
+        button {
+            padding: 8px 10px;
+            width: 150px;
+            background-color: rgb(188, 167, 237);
+            border-radius: 10px;
+            font-size: 15px;
+            color: white;
+            border: 1px solid #ffffff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(178, 158, 224);
+            transition: all 0.5s ease;
+            border: 1px solid #000000;
+            color: black;
+        }
+
+        #resultado {
+            width: 300px;
+            font-size: 17px;
+        }
+
+    </style>
+
+    <script>
+        const separar = () => {
+            const nome = document.getElementById('nome').value;
+            const separado = nome.split('').join(' ');
+            document.getElementById('resultado').innerHTML = `<strong>Nome separado:</strong> ${separado}`;
+        }
+    </script>
+</body>
+</html>
